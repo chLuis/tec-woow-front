@@ -1,75 +1,44 @@
-# React + TypeScript + Vite
+# Frontend Project UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene la interfaz de usuario de la aplicación, desarrollada con **React** y **TypeScript** utilizando **Vite** como empaquetador. El diseño está construido con **Tailwind CSS** y componentes de **shadcn/ui**, asegurando validación de datos robusta mediante **Zod**.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [React](https://react.dev/) - Biblioteca para interfaces de usuario
+* [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript con tipado estático
+* [Vite](https://vitejs.dev/) - Entorno de desarrollo rápido
+* [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos utility-first
+* [shadcn/ui](https://ui.shadcn.com/) - Colección de componentes reutilizables
+* [Zod](https://zod.dev/) - Validación de esquemas
 
-## React Compiler
+## 📋 Prerrequisitos
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Antes de comenzar, asegúrate de tener instalado:
+* Node.js (v18 o superior recomendado para Vite)
 
-Note: This will impact Vite dev & build performances.
+## 🚀 Instalación y Configuración
 
-## Expanding the ESLint configuration
+Sigue estos pasos para levantar el proyecto en tu entorno local:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Clonar el repositorio e instalar dependencias
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/chLuis/tec-woow-front.git
+cd tec-woow-front
+npm install
 ```
+### 2. Configurar variables de entorno
+Crea un archivo `.env` en la raíz del proyecto y añade las variables necesarias como se muestra en el archivo .env.example.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Iniciar el servidor de desarrollo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+Esto iniciará el servidor de desarrollo y podrás acceder a la aplicación en `http://localhost:5173`.
+
+### 4. Autenticación
+Para poder acceder es necesario tener el backend corriendo y con todos los datos cargados dentro de la base de datos, lo cual permitira el ingreso a la misma
+
+URL para ejecutar el backend https://github.com/chLuis/tec-woow-back
+
